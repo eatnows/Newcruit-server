@@ -1,4 +1,4 @@
-package me.eatnows.newcruit.config.swagger;
+package me.eatnows.newcruit.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -12,7 +12,9 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
-//@ComponentScan("me.eatnows.newcruit.controller")
+/**
+ * /swagger-ui.html 입력하면 api문서로 접근가능
+ */
 @Configuration
 @EnableSwagger2
 public class SwaggerConfig {
