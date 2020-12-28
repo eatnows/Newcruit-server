@@ -24,7 +24,7 @@ public class CorsConfig implements WebMvcConfigurer {
         config.addAllowedOrigin(System.getenv("CLIENT_URL"));
         config.addAllowedHeader("*");   // * : 모든 header에 응답을 허용
         config.addAllowedMethod("*");   // * : 모든 http 메소드를 허용
-
+        config.addExposedHeader("*");   // client 모든 헤더를 확인할 수 있게
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", config); // pattern에 들어오는 주소는 config 설정을 따르라
         return new CorsFilter(source);
